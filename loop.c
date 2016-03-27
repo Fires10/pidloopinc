@@ -7,25 +7,43 @@ output = kP * E + Ki*ierr*dt + Kd*derr/dt
 
 
 
-
-
-
-
-
 */
 
 
 
 #include <stdio.h>
 
-int setpoint = 0;
-int actual = 0;
-int kP = 0;
-int kd = 0;
-int ki = 0;
-int derr = 0;
-int ierr = 0;
 
 
+double getActual(void);
 
-int main(
+int main(){
+  
+double output = 0;  
+double setpoint = 0;
+double actual = 0;
+double kP = 0;
+double kd = 0;
+double ki = 0;
+double derr = 0;
+double ierr = 0;
+double dt = 0;
+
+while (1){
+  
+  output = kP * (setpoint - actial) + ki*
+  
+}  
+  
+  
+}
+
+double getActual(void){
+
+/* FIXME to read actual from device */  
+double actual = 0;
+
+  
+return actual;  
+  
+}

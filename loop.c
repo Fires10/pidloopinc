@@ -31,7 +31,12 @@ double dt = 0;
 
 while (1){
   
-  output = kP * (setpoint - actial) + ki*
+  
+  prev = currError;
+  actual = readactual();
+  currError = setpoint - actual;
+  
+  output = kP * currError + ki*(currError+prev) + kd*(currError-prev);
   
 }  
   
